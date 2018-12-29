@@ -49,3 +49,8 @@ file.close()
 ```
 如果提示“UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 31: illegal multibyte sequence”说明打开的文件格式不对，需要修改“file =open("data.txt","r")”为“file = open("readme.md", "r", encoding='UTF-8')”
 flag ：标记
+- random() 方法返回随机生成的一个实数，它在[0,1)范围内。
+
+-             # clock_start = time.clock() # Python time clock() 函数以浮点数计算的秒数返回当前的CPU时间。用来衡量不同程序的耗时，比time.time()更有用。
+            # python3.3版后推荐用time.perf_counter() 来测量执行时间
+            
