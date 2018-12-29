@@ -12,7 +12,8 @@ pygame.draw.aaline：　 绘制一根平滑的线（反锯齿）
 pygame.draw.aalines：  绘制一系列平滑的线
 
 ----
-pygame绘制屏幕保持不闪退的代码
+#### pygame绘制屏幕保持不闪退的代码
+```
 import pygame
 import sys
 from pygame.locals import *
@@ -27,3 +28,24 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+```
+----
+#### python文件打开的方式
+
+打开模式 	说明
+“r” 	以读取的方式打开文件
+"w" 	以写入的方式打开文件
+"a" 	以追加的方式打开文件
+"r+" 	以读写的方式打开文件
+"w+" 	以写读的方式打开文件
+"a+" 	以追加和读取的方式打开文件
+
+```
+#调用open函数打开一个文件
+file =open("data.txt","r")
+all_data = file.readlines()
+#在完成操作后要将文件关闭
+file.close()
+```
+如果提示“UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 31: illegal multibyte sequence”说明打开的文件格式不对，需要修改“file =open("data.txt","r")”为“file = open("readme.md", "r", encoding='UTF-8')”
+flag ：标记
